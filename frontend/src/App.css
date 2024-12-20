@@ -1,0 +1,58 @@
+.landingPageContainer {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../public/background.png);
+    background-size: cover;
+    color: #fff;
+}
+
+.landingPageContainer nav {
+    padding-inline: 1.2rem;
+    padding-block: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landingPageContainer nav h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.landingPageContainer nav .navList {
+    display: flex;
+    gap: 1.6rem;
+    cursor: pointer;
+}
+
+.landingMainContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-inline: 5rem;
+    height: 80vh;
+    align-items: center;
+}
+
+.landingMainContainer>div:nth-child(1) {
+    font-size: 2.1rem;
+}
+
+.landingMainContainer>div:nth-child(1) .btn {
+    background-color: #ff9839;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-top: 1.4rem;
+}
+
+.landingMainContainer>div:nth-child(1) .btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.landingMainContainer>div:nth-child(2) img {
+    height: 70vh;
+    width: auto;
+}

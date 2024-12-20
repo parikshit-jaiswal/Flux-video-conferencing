@@ -11,7 +11,7 @@ export const connnectToSocket = (server) => {
       methods: ["GET", "POST"],
       allowedHeaders: ["*"],
       credentials: true
-    }
+    } //...
   });
 
   io.on("connection", (socket) => {
