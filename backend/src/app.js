@@ -22,7 +22,7 @@ app.use(express.urlencoded({ limit: "40kb", extended: true }));
 app.use("/api/v1/users", userRoutes);
 
 app.get("/", (req, res) => {
-  res.send("worling");
+  res.send("working");
 });
 
 const start = async () => {
