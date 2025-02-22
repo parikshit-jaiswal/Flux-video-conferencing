@@ -41,6 +41,7 @@ export const AuthProvider = ({ children }) => {
             })
             if (request.status === httpStatus.OK) {
                 localStorage.setItem("token", request.data.token);
+                return request.data.message;
             }
         } catch (err) {
             throw err;
@@ -49,7 +50,7 @@ export const AuthProvider = ({ children }) => {
 
 
     const data = {
-        userData, setUserData, handleRegister
+        userData, setUserData, handleRegister, handleLogin
     }
 
     return (

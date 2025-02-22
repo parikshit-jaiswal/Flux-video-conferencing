@@ -18,12 +18,12 @@ const login = async (req, res) => {
         .json({ message: "User Not Found" });
     }
 
-    if (bcrypt.compare(password, user.password)) {
+    if (await bcrypt.compare(password, user.password)) {
       let token = crypto.randomBytes(20).toString("hex");
 
       user.token = token;
       await user.save();
-      return res.status(httpStatus.OK).json({ token: token });
+      return res.status(httpStatus.OK).json({ token: token, message: "Login Successfully" });
     }
   } catch (e) {
     res.json({ message: `Something went wrong ${e}` });
